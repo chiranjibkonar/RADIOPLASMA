@@ -20,8 +20,8 @@ def Beq(V,alpha,z,D_LMpc,nuo_MHz, So_nuo_Jy,gamma_1, gamma_2):
   So_nuo=So_nuo_Jy*1e-23  # in CGS (erg/s/cm^2/Hz )  
   Term_3 = (4*pi*D_Lcm**2)/(1-2*alpha)  
   Term_4 = (So_nuo*nuo**alpha)/((1+z)**(1-alpha))   
-  E_1 = E(gamma_1,alpha)
-  E_2 = E(gamma_2,alpha)   
+  E_1 = E(gamma_1)
+  E_2 = E(gamma_2)   
   Term_5=E_2**(1-2*alpha) - E_1**(1-2*alpha)
   Beq= (Term_1*Term_2*Term_3*Term_4*Term_5)**(1/(3+alpha))   
   return Beq 
