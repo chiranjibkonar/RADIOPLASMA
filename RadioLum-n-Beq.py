@@ -24,6 +24,5 @@ def Beq(V,alpha,z,D_LMpc,nuo_MHz, So_nuo_Jy,gamma_1, gamma_2):
   Term_5=E_2**(1-2*alpha) - E_1**(1-2*alpha)
   Beq= (Term_1*Term_2*Term_3*Term_4*Term_5)**(1/(3+alpha))   
   return Beq 
-st.write("Beq(1e70, 0.75, 0.02, 100, 10, 10, 1e+5)")   
-st.print("Beq(1e70, 0.75, 0.02, 100, 10, 10, 1e+5)") 
+st.write(Beq(1e70, 0.75, 0.02, 100, 10, 10, 1e+5))    
 st.write("output") 
