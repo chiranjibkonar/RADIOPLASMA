@@ -12,10 +12,6 @@ def E(gamma):
   E = (gamma*me*c**2) 
   return E
 def Beq(V,alpha,z,D_LMpc,nuo_MHz, So_nuo_Jy,gamma_1, gamma_2):  
-
-def E(gamma):
-  E = (gamma*me*c**2) 
-  return E
   
   Term_1 = (16*pi/V) 
   Term_2 = C_1**(1-alpha)/C_3  
