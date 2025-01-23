@@ -29,7 +29,8 @@ inputs=st.text_input("Give V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gam
 if inputs:
   values=inputs.split(",") 
   V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2 = map(float, values) 
-  st.info(f"Beq = {Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2)}")
+  st.info(f"Beq = {Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2)} Gauss") 
+  st.write(f"Beq = {Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2)} Gauss") 
   st.write(Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2))
 else:
   "Enter the values of the parameters"
