@@ -26,9 +26,11 @@ def Beq(V,alpha,z,D_LMpc,nuo_MHz, So_nuo_Jy,gamma_1, gamma_2):
 #st.write(Beq(1e70, 0.75, 0.02, 100, 600, 10, 10, 1e+5))    
 # Taking inputs
 inputs=st.text_input("Give V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2")  # it will create a slot in streamlit for taking inouts 
-values=inputs.split(",") 
-V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2 = map(float, values) 
-#  #####
-st.write(Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2))
-
-st.write("output") 
+if inputs:
+  values=inputs.split(",") 
+  V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2 = map(float, values) 
+  st.write(Beq(V, alpha, z, D_LMpc, nuo_MHz, So_nuo_Jy, gamma_1, gamma_2))
+else:
+  "Enter the values of the parameters"
+  
+#st.write("output") 
